@@ -49,7 +49,7 @@ function getVigenereCharacterAt(index, plaintext, key) {
   if (keyIndex === -1) {
     return '';
   }
-  if (!isLetter(plaintext[index])) {
+  if (!isLetter(plaintext[index]) || !isLetter(key[keyIndex])) {
     return plaintext[index];
   }
 

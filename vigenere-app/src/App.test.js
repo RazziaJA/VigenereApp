@@ -11,3 +11,7 @@ test('Key "A" has no effect.', () => {
 test('Non-alphabet characters are unchanged.', () => {
   expect(vigenere("aa!", "b")).toBe("bb!");
 });
+
+test('Non-alphabet key characters leave plaintext unchanged.', () => {
+  expect(vigenere("aaa", "2!b")).toBe("aab");
+})
